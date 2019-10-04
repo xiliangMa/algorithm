@@ -4,7 +4,7 @@
      归并排序 bubble sort 递归
 '''
 
-def merge(left, right):
+def Merge(left, right):
     i, j = 0, 0
     result = []
     while i < len(left) and j < len(right):
@@ -18,16 +18,16 @@ def merge(left, right):
     result.extend(right[j:])
     return result
 
-def merge_sort(arrs):
+def Merge_sort(arrs):
     if len(arrs) <= 1:
         return arrs
 
     minddle = len(arrs) // 2
-    left = merge_sort(arrs[:minddle])
-    right = merge_sort(arrs[minddle:])
-    return merge(left, right)
+    left = Merge_sort(arrs[:minddle])
+    right = Merge_sort(arrs[minddle:])
+    return Merge(left, right)
 
 
 if __name__ == '__main__':
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print("归并排序(递归)---后：", merge_sort(arrs))
+    print("归并排序(递归)---后：", Merge_sort(arrs))

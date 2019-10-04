@@ -9,7 +9,7 @@
     n 为数组长度
     i 为任意指定的节点
 '''
-def Heap_Sort(tree, n, i):
+def Heapify(tree, n, i):
     if i >= n:
         return tree
 
@@ -25,10 +25,27 @@ def Heap_Sort(tree, n, i):
 
     if max != i:
         tree[i], tree[max] = tree[max], tree[i]
-        Heap_Sort(tree, n, max)
+        Heapify(tree, n, max)
 
     return tree
 
+def Build_Heap(tree, n):
+    lastNode = n - 1
+    parent = (lastNode - 1) / 2
+    for i in range(parent, -1, -1):
+        Heapify(tree, n, i)
+    return tree
+
+def Heap_Sort(tree, n):
+    tree = Build_Heap(tree, n)
+    for i in range(n - 1, -1, -1):
+        # 交换根节点和最后一个节点
+        tree[i], tree[0] = tree[0], tree[i]
+        Heapify(tree, i, 0)
+
+    return tree
+
+
 if __name__ == '__main__':
-    tree = [4, 10, 3, 5, 1, 2]
-    print("堆排序(递归)---后：", Heap_Sort(tree, 6, 0))
+    tree = [2, 5, 3, 1, 10, 4]
+    print("堆排序(递归)---后：", Heap_Sort(tree, 6))

@@ -15,3 +15,7 @@ HELP.md
 *.iml
 *.ipr
 .DS_Store
+
+
+### pyhton ###
+venv

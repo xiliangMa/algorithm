@@ -5,10 +5,10 @@ import "testing"
 /**
  * 归并排序 merger sort 递归
  */
-func Merger(left, right []int) []int{
+func Merger(left, right []int) []int {
 	i, j := 0, 0
 	var result []int
-	for i < len(left) && j < len(right){
+	for i < len(left) && j < len(right) {
 		if left[i] <= right[j] {
 			result = append(result, left[i])
 			i += 1
@@ -22,7 +22,7 @@ func Merger(left, right []int) []int{
 	return result
 }
 
-func Merger_Sort(arrs []int) []int{
+func Merger_Sort(arrs []int) []int {
 	if len(arrs) <= 1 {
 		return arrs
 	}
@@ -34,7 +34,7 @@ func Merger_Sort(arrs []int) []int{
 
 }
 
-func Test_Msort(t *testing.T){
+func Test_Msort(t *testing.T) {
 	arrs := []int{3, 1, 6, 4, 5, 0, 8, 9, 7, 2}
 	t.Log("归并排序(递归)---后：", Merger_Sort(arrs))
 

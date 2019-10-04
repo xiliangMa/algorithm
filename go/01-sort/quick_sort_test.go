@@ -43,7 +43,6 @@ func Qsort2(arrs []int, start, end int) []int {
 			left += 1
 		}
 
-
 		for left <= right && arrs[right] > pivod {
 			right -= 1
 		}

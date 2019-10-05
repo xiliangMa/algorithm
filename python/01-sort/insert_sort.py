@@ -14,4 +14,4 @@ def Isort(arrs):
 
 if __name__ == '__main__':
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print("插入排序---后：", Isort(arrs))
+    print "插入排序---后：", Isort(arrs)

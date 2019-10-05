@@ -15,7 +15,7 @@ def Ssort(arrs):
 
 if __name__ == '__main__':
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print("选择排序(递归)---后：",Ssort(arrs))
+    print "选择排序(递归)---后：",Ssort(arrs)
 
 
 

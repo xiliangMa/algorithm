@@ -45,8 +45,8 @@ def Test_Qsort2(arrs, start, end):
 
 if __name__ == '__main__':
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print ("快速排序(1)---后：", Test_Qsort(arrs))
+    print  "快速排序(1)---后：", Test_Qsort(arrs)
 
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print ("快速排序(2)---后：", Test_Qsort2(arrs, 0, 9))
+    print "快速排序(2)---后：", Test_Qsort2(arrs, 0, 9)
 

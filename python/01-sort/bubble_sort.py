@@ -28,5 +28,5 @@ def Bsort1(arrs):
 
 if __name__ == '__main__':
     arrs = [3, 1, 6, 4, 5, 0, 8, 9, 7, 2]
-    print("冒泡排序(1)---后：", Bsort(arrs))
-    print("冒泡排序(2递归)---后：", Bsort1(arrs))
+    print "冒泡排序(1)---后：", Bsort(arrs)
+    print "冒泡排序(2递归)---后：", Bsort1(arrs)

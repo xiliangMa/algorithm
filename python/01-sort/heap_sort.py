@@ -28,10 +28,13 @@ def Heapify(tree, n, i):
         Heapify(tree, n, max)
 
     return tree
-
+'''
+    build 关键在于找到最后一个父节点，然后顺序执行heapify 操作即可
+'''
 def Build_Heap(tree, n):
     lastNode = n - 1
     parent = (lastNode - 1) / 2
+    # 倒叙执行heapify
     for i in range(parent, -1, -1):
         Heapify(tree, n, i)
     return tree
@@ -48,4 +51,4 @@ def Heap_Sort(tree, n):
 
 if __name__ == '__main__':
     tree = [2, 5, 3, 1, 10, 4]
-    print("堆排序(递归)---后：", Heap_Sort(tree, 6))
+    print "堆排序(递归)---后：", Heap_Sort(tree, 6)

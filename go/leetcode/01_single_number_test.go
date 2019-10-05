@@ -26,6 +26,6 @@ func SingleNumber(nums []int) int {
 }
 
 func Test_Single_Number(t *testing.T) {
-	nums := []int{2,2,1}
+	nums := []int{2, 2, 1}
 	t.Log(SingleNumber(nums))
 }

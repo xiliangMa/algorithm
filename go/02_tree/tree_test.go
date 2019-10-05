@@ -16,7 +16,7 @@ func Build_Node() *Node {
 	return &node1
 }
 
-func Pre_Order(node *Node){
+func Pre_Order(node *Node) {
 	if node != nil {
 		println(node.data)
 		Pre_Order(node.left)
@@ -25,22 +25,20 @@ func Pre_Order(node *Node){
 }
 
 func In_Order(node *Node) {
-	if node != nil{
+	if node != nil {
 		In_Order(node.left)
 		println(node.data)
 		In_Order(node.right)
 	}
 }
 
-
 func Post_Order(node *Node) {
-	if node != nil{
+	if node != nil {
 		Post_Order(node.left)
 		Post_Order(node.right)
 		println(node.data)
 	}
 }
-
 
 func Test_Tree(t *testing.T) {
 	root := Build_Node()

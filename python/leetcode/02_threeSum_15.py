@@ -45,19 +45,17 @@ class Solution(object):
             left = i + 1
             right = length - 1
             while left < right:
-                result = []
-                if nums[i] + nums[left] + nums[right] == 0:
-                    result.append(nums[i])
-                    result.append(nums[left])
-                    result.append(nums[right])
-                    result.sort()
+                target = nums[i] + nums[left] + nums[right]
+                if target == 0:
+                    result = [nums[i], nums[left], nums[right]]
+                    # result.sort()
                     if result not in data:
                         data.append(result)
                     left += 1
                     right -= 1
-                elif nums[i] + nums[left] + nums[right] < 0:
+                elif target < 0:
                     left += 1
-                elif nums[i] + nums[left] + nums[right] > 0:
+                elif target > 0:
                     right -= 1
         return data
 

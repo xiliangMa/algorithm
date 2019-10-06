@@ -44,15 +44,20 @@ class Solution(object):
         for i in range(length):
             left = i + 1
             right = length - 1
+            if i != 0 and nums[i] == nums[i - 1]:
+                continue
+
             while left < right:
                 target = nums[i] + nums[left] + nums[right]
                 if target == 0:
                     result = [nums[i], nums[left], nums[right]]
-                    # result.sort()
-                    if result not in data:
-                        data.append(result)
+                    data.append(result)
                     left += 1
                     right -= 1
+                    while left < right and nums[left] == nums[left - 1]:
+                        left += 1
+                    while left < right and nums[right] == nums[right + 1]:
+                        right -= 1
                 elif target < 0:
                     left += 1
                 elif target > 0:
